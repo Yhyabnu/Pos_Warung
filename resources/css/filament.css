@@ -1,0 +1,234 @@
+/* ================================================
+   CUSTOM FILAMENT HEADER STYLES
+   Designed for POS System
+   ================================================ */
+
+/* ====================
+   MAIN HEADER/TOP BAR
+   ==================== */
+
+.filament-main-topbar {
+    background: linear-gradient(135deg, #fbd500 0%, #f59e0b 100%) !important;
+    border-bottom: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    min-height: 64px !important;
+    padding: 0 1rem !important;
+}
+
+/* ====================
+   BRAND/LOGO AREA
+   ==================== */
+
+.filament-sidebar {
+    background: linear-gradient(180deg, #1f2937 0%, #374151 100%) !important;
+    border-right: none !important;
+}
+
+.filament-brand {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding: 1.25rem 1.5rem !important;
+}
+
+.filament-brand-text {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    letter-spacing: -0.025em !important;
+}
+
+/* ====================
+   TOPBAR ITEMS (Menu, Notifications, User)
+   ==================== */
+
+.fi-topbar-item {
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    margin: 0 2px !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.fi-topbar-item:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    transform: translateY(-1px) !important;
+}
+
+.fi-topbar-item-button {
+    color: white !important;
+}
+
+/* ====================
+   USER AVATAR & DROPDOWN
+   ==================== */
+
+.filament-topbar .fi-avatar {
+    border: 2.5px solid rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease !important;
+}
+
+.filament-topbar .fi-avatar:hover {
+    border-color: white !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ====================
+   NOTIFICATION BELL
+   ==================== */
+
+.fi-topbar-notifications-trigger {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-radius: 10px !important;
+    transition: all 0.2s ease !important;
+}
+
+.fi-topbar-notifications-trigger:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: scale(1.05) !important;
+}
+
+.fi-topbar-notifications-badge {
+    background: #ef4444 !important;
+    color: white !important;
+    border: 2px solid #fbd500 !important;
+    font-weight: 700 !important;
+}
+
+/* ====================
+   SEARCH INPUT
+   ==================== */
+
+.filament-topbar-search-input {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 10px !important;
+    color: white !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.filament-topbar-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 500 !important;
+}
+
+.filament-topbar-search-input:focus {
+    background: rgba(255, 255, 255, 0.22) !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15) !important;
+    outline: none !important;
+}
+
+/* ====================
+   SIDEBAR MENU ITEMS
+   ==================== */
+
+.filament-sidebar-group {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.filament-sidebar-item {
+    color: #d1d5db !important;
+    border-radius: 8px !important;
+    margin: 2px 0.75rem !important;
+    padding: 0.75rem 1rem !important;
+    transition: all 0.2s ease !important;
+    font-weight: 500 !important;
+}
+
+.filament-sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: white !important;
+    transform: translateX(4px) !important;
+}
+
+.filament-sidebar-item.active {
+    background: linear-gradient(135deg, #fbd500 0%, #f59e0b 100%) !important;
+    color: #1f2937 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 12px rgba(251, 213, 0, 0.3) !important;
+}
+
+.filament-sidebar-item.active .fi-icon {
+    color: #1f2937 !important;
+}
+
+/* ====================
+   DARK MODE SUPPORT
+   ==================== */
+
+.dark .filament-main-topbar {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+    border-bottom: 1px solid #475569 !important;
+}
+
+.dark .filament-sidebar {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+.dark .filament-brand {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-bottom: 1px solid #334155 !important;
+}
+
+/* ====================
+   RESPONSIVE DESIGN
+   ==================== */
+
+@media (max-width: 768px) {
+    .filament-main-topbar {
+        padding: 0 0.5rem !important;
+    }
+    
+    .filament-brand {
+        padding: 1rem !important;
+    }
+    
+    .filament-brand-text {
+        font-size: 1.25rem !important;
+    }
+}
+
+/* ====================
+   CUSTOM BADGES & INDICATORS
+   ==================== */
+
+.filament-topbar-item.has-notification::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    border: 2px solid #fbd500;
+}
+
+/* ====================
+   KASIR PAGE SPECIFIC
+   ==================== */
+
+/* Highlight active Kasir page */
+.fi-nav-item[href*="kasir"].fi-active {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: white !important;
+}
+
+/* ====================
+   SMOOTH TRANSITIONS
+   ==================== */
+
+.filament-main-topbar,
+.filament-sidebar,
+.filament-brand,
+.fi-topbar-item,
+.filament-sidebar-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
