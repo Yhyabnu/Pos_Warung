@@ -1,59 +1,233 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# POS Warung
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Dokumentasi ini menjelaskan secara lengkap mengenai aplikasi **POS Warung**, sebuah sistem Point of Sale berbasis **Laravel** yang dirancang untuk membantu pengelolaan warung atau toko kecil secara efisien, modern, dan terstruktur.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Apa Itu POS Warung?
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**POS Warung** adalah aplikasi kasir sederhana yang berfungsi untuk:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Mengelola data produk
+* Mengelola kategori
+* Memproses transaksi penjualan
+* Melihat riwayat transaksi
+* Mengelola stok barang
 
-## Learning Laravel
+Aplikasi ini dikembangkan menggunakan **Laravel**, **Blade Template**, **Tailwind/Bootstrap (sesuai konfigurasi)** serta database **MySQL**.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🧩 Fitur Utama
 
-## Laravel Sponsors
+### 1. **Manajemen Produk**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* Tambah, edit, hapus produk
+* Menyimpan informasi produk (nama, harga, stok, kategori)
+* Upload gambar produk
 
-### Premium Partners
+### 2. **Manajemen Kategori**
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+* Membuat kategori baru
+* Edit & hapus kategori
+* Menghubungkan kategori dengan produk
 
-## Contributing
+### 3. **Transaksi Penjualan**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Membuat transaksi secara cepat
+* Menambah item ke keranjang
+* Menghitung total otomatis
+* Cetak struk (**opsional tergantung implementasi**)
 
-## Code of Conduct
+### 4. **Riwayat Transaksi**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Menampilkan daftar transaksi
+* Detail transaksi lengkap
+* Pencarian & filter
 
-## Security Vulnerabilities
+### 5. **Manajemen Stok Barang**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* Stok otomatis berkurang saat transaksi dibuat
+* Validasi stok saat pemesanan
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🏗️ Arsitektur & Teknologi
+
+| Komponen    | Teknologi                          |
+| ----------- | ---------------------------------- |
+| Backend     | Laravel 10+                        |
+| Frontend    | Blade Template, Tailwind/Bootstrap |
+| Database    | MySQL                              |
+| Build Tools | Vite                               |
+| Bahasa      | PHP, JavaScript                    |
+
+---
+
+## 📂 Struktur Folder Penting
+
+```
+POS_Warung/
+├── app/
+│   ├── Http/Controllers/   # Controller aplikasi
+│   ├── Models/             # Model database
+│   └── ...
+├── resources/
+│   ├── views/              # File Blade (frontend)
+│   ├── css/js              # Asset frontend
+├── routes/
+│   └── web.php             # Routing utama
+├── database/
+│   ├── migrations/         # Struktur tabel
+├── public/                 # Public assets
+└── composer.json           # Dependensi PHP
+```
+
+---
+
+## 📦 Instalasi & Cara Menjalankan
+
+Ikuti langkah berikut untuk meng-clone dan menjalankan aplikasi.
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/Yhyabnu/Pos_Warung.git
+cd Pos_Warung
+```
+
+### 2️⃣ Install Dependensi Laravel
+
+```bash
+composer install
+```
+
+### 3️⃣ Install Dependensi Frontend
+
+```bash
+npm install
+```
+
+### 4️⃣ Buat File .env
+
+```bash
+cp .env.example .env
+```
+
+Lalu atur konfigurasi database:
+
+```
+DB_DATABASE=pos_warung
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 5️⃣ Generate Key
+
+```bash
+php artisan key:generate
+```
+
+### 6️⃣ Migrasi Database
+
+```bash
+php artisan migrate
+```
+
+### 7️⃣ Jalankan Server
+
+```bash
+php artisan serve
+```
+
+Buka di browser:
+
+```
+http://localhost:8000
+```
+
+### 8️⃣ Jalankan Vite (opsional)
+
+```bash
+npm run dev
+```
+
+---
+
+## 🗄️ Struktur Database
+
+Tabel utama:
+
+* **products** — menyimpan data barang
+* **categories** — menyimpan kategori
+* **transactions** — menyimpan transaksi
+* **transaction_items** — detail item tiap transaksi
+
+Diagram sederhananya:
+
+```
+categories (1) ---- (∞) products
+products (1) ---- (∞) transaction_items ---- (1) transactions
+```
+
+---
+
+## 💡 Alur Kerja Aplikasi
+
+1. Admin membuat kategori
+2. Admin menambahkan produk ke dalam kategori tersebut
+3. Kasir memilih produk dan membuat transaksi
+4. Sistem menghitung total dan menyimpan transaksi
+5. Stok otomatis berkurang
+6. Riwayat transaksi bisa dilihat kapan saja
+
+---
+
+## 📸 Screenshot
+
+Berikut adalah contoh tampilan antarmuka dari **POS Warung**. Ganti URL gambar sesuai dengan lokasi file screenshot Anda.
+
+### 🏠 Dashboard
+
+![Dashboard POS Warung](https://via.placeholder.com/900x500?text=Dashboard+POS+Warung)
+
+### 📦 Halaman Produk
+
+![Halaman Produk](https://via.placeholder.com/900x500?text=Halaman+Produk)
+
+### 🗂️ Halaman Kategori
+
+![Halaman Kategori](https://via.placeholder.com/900x500?text=Halaman+Kategori)
+
+### 🛒 Transaksi Kasir
+
+![Halaman Transaksi](https://via.placeholder.com/900x500?text=Transaksi+Kasir)
+
+### 🧾 Detail Riwayat Transaksi
+
+![Riwayat Transaksi](https://via.placeholder.com/900x500?text=Riwayat+Transaksi)
+
+---
+
+## 🧑‍💻 Kontribusi
+
+Jika ingin berkontribusi:
+
+1. Fork repository
+2. Buat branch baru
+3. Commit perubahan
+4. Ajukan Pull Request
+
+---
+
+## ⚖️ Lisensi
+
+Proyek ini menggunakan lisensi MIT. Silakan digunakan, dimodifikasi, dan dikembangkan.
+
+---
+
+## ⭐ Dukungan
+
+Jika proyek ini bermanfaat, berikan **star ⭐** di repository GitHub!
+
+Terima kasih telah menggunakan **POS Warung** 🙌
